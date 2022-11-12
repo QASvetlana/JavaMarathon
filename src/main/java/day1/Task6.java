@@ -8,6 +8,7 @@ public class Task6 {
             y = k * i;
             System.out.println(k + " x " + i + " = " + y);
 
+
         }
     }
 }
