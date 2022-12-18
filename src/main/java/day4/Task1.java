@@ -14,7 +14,7 @@ public class Task1 {
 
         for (int x = 0; x < numbers.length; x++)
             numbers[x] = rand.nextInt(10);
-        System.out.print(Arrays.toString(numbers));
+        System.out.println(Arrays.toString(numbers));
 
         System.out.println("Длинна массива: " + numbers.length);
 

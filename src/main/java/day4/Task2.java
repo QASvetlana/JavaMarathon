@@ -1,43 +1,48 @@
 package day4;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Task2 {
     public static void main(String[] args) {
         Random rand = new Random();
         int[] numbers = new int[100];
-        int vs[] = new int[numbers.length];
-        int j=-1;
-        int ost;
+
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = rand.nextInt(10000);
-             // System.out.print(numbers[i] + " ");
+            System.out.println(Arrays.toString(numbers));
 
         }
-            int min = numbers[0];
-            for (int i : numbers)
-                if (min > i) {
-                    min = i;
-                }
-             // System.out.println();
-            //  System.out.println(min);
+        int min = 10000;
+        for (int i : numbers) {
+            if (i < min)
+                min = i;
+        }
+        System.out.println("Наименьший элемент массива: " + min);
 
-        for (int i=0; i<numbers.length; i++) {
-            ost = numbers[i]%10;
-            if (ost==0){
-                j++;
-                vs[j]=numbers[i];
+        int max = 0;
+        for (int i : numbers) {
+            if (i > max)
+                max = i;
+        }
+        System.out.println("Наибольший элемент массива: " + max);
 
+        int count = 0;
+        for (int i : numbers) {
+            if (i % 10 == 0)
+                count++;
+        }
 
-       // ost=0;
+        System.out.println("Количество элементов массива, оканчивающихся на 0: " + count);
 
+        int sum = 0;
+        for (int i : numbers) {
+            if (i % 10 == 0)
+            sum += i;
+        }
 
-      //  for (int i=0; i<vs.length; i++)
-         //   if (vs[i]>ost) ost=vs[i];
-
-
-        System.out.println(i+" ");
+        System.out.println("Сумма элементов массива, оканчивающихся на 0: " + sum);
     }
-        }}}
+}
 
 
